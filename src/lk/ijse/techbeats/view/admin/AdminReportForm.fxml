@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="600.0" maxWidth="840.0" minHeight="-Infinity" minWidth="-Infinity"fx:controller="lk.ijse.techbeats.controller.admin.AdminReportFormController" prefHeight="600.0" prefWidth="840.0" style="-fx-background-color: #130f40;" stylesheets="@../../style/admin/AdminReport.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label layoutX="178.0" layoutY="139.0" prefHeight="26.0" prefWidth="218.0" text="Monthly income report" textFill="#dac4c4">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <Label layoutX="178.0" layoutY="221.0" prefHeight="26.0" prefWidth="218.0" text="Annualy income report" textFill="#dac4c4">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <Label layoutX="178.0" layoutY="309.0" prefHeight="26.0" prefWidth="218.0" text="Mostly movable item" textFill="#dac4c4">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <Label layoutX="178.0" layoutY="393.0" prefHeight="26.0" prefWidth="218.0" text="Least movable item" textFill="#dac4c4">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <JFXButton layoutX="553.0" layoutY="140.0" prefHeight="27.0" prefWidth="61.0" styleClass="btnFunction" text="View" textFill="#dacece" />
+      <JFXButton layoutX="553.0" layoutY="221.0" prefHeight="27.0" prefWidth="61.0" styleClass="btnFunction" text="View" textFill="#dacece" />
+      <JFXButton layoutX="553.0" layoutY="309.0" prefHeight="27.0" prefWidth="61.0" styleClass="btnFunction" text="View" textFill="#dacece" />
+      <JFXButton layoutX="553.0" layoutY="393.0" prefHeight="27.0" prefWidth="61.0" styleClass="btnFunction" text="View" textFill="#dacece" />
+   </children>
+</Pane>

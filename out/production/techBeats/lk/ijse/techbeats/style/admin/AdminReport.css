@@ -1,0 +1,12 @@
+.btnFunction{
+    -fx-background-radius: 20px;
+    -fx-border-radius: 20px;
+    -fx-border-color: #819597;
+
+}
+
+
+.btnFunction:hover {
+    -fx-background-color: steelblue;
+    -fx-text-fill: #000;
+}

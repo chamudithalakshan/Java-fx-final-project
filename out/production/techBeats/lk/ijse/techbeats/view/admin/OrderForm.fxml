@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+
+<Pane maxHeight="600.0" maxWidth="840.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="840.0" style="-fx-background-color: #130f40;" stylesheets="@../../style/admin/OrderForm.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <ScrollPane layoutY="254.0" prefHeight="346.0" prefWidth="840.0">
+         <content>
+            <TableView prefHeight="345.0" prefWidth="828.0" style="-fx-background-color: #130f40;">
+              <columns>
+                <TableColumn prefWidth="123.0" text="C1" />
+                <TableColumn prefWidth="156.0" text="C2" />
+                  <TableColumn prefWidth="156.0" text="C3" />
+                  <TableColumn prefWidth="170.0" text="C4" />
+              </columns>
+            </TableView>
+         </content>
+      </ScrollPane>
+      <JFXTextField focusColor="#130f40" layoutX="596.0" layoutY="45.0" prefHeight="25.0" prefWidth="234.0" promptText="                                     Search here" styleClass="textField" unFocusColor="#130f40">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </JFXTextField>
+      <JFXButton layoutX="799.0" layoutY="48.0" prefHeight="25.0" prefWidth="24.0" styleClass="btnSearch" text=" " />
+      <HBox layoutX="14.0" layoutY="213.0" prefHeight="31.0" prefWidth="810.0">
+         <children>
+            <Label prefHeight="33.0" prefWidth="115.0" text="  Order ID" textFill="#c6baba">
+               <font>
+                  <Font size="15.0" />
+               </font>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <HBox.margin>
+                  <Insets right="39.0" />
+               </HBox.margin>
+            </Label>
+            <Label layoutX="10.0" layoutY="10.0" prefHeight="33.0" prefWidth="115.0" text="Customer id" textFill="#c6baba">
+               <font>
+                  <Font size="15.0" />
+               </font>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <HBox.margin>
+                  <Insets right="39.0" />
+               </HBox.margin>
+            </Label>
+            <Label layoutX="125.0" layoutY="10.0" prefHeight="33.0" prefWidth="115.0" text="Order date" textFill="#c6baba">
+               <font>
+                  <Font size="15.0" />
+               </font>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <HBox.margin>
+                  <Insets right="39.0" />
+               </HBox.margin>
+            </Label>
+            <Label layoutX="240.0" layoutY="10.0" prefHeight="33.0" prefWidth="115.0" text="Cost" textFill="#c6baba">
+               <font>
+                  <Font size="15.0" />
+               </font>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <HBox.margin>
+                  <Insets right="39.0" />
+               </HBox.margin>
+            </Label>
+         </children>
+      </HBox>
+   </children>
+</Pane>

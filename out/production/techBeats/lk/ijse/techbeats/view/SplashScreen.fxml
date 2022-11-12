@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXProgressBar?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="412.0" prefWidth="705.0" style="-fx-background-color: #130f40;" stylesheets="@../style/SplashScreen.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.techbeats.controller.SplashScreenController">
+   <children>
+      <ImageView fitHeight="302.0" fitWidth="389.0" layoutX="46.0" layoutY="38.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/bbab51943a0e22dde43137e058a05c01-removebg-preview.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="318.0" layoutY="206.0" text="Tech Beats Computers" textFill="#bcbbbb">
+         <font>
+            <Font size="28.0" />
+         </font>
+      </Label>
+      <JFXProgressBar fx:id="bar" layoutX="4.0" layoutY="400.0" prefHeight="0.0" prefWidth="696.0" progress="0.0" styleClass="pBar" />
+   </children>
+</AnchorPane>

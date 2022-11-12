@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="600.0" maxWidth="840.0" minHeight="-Infinity" fx:controller="lk.ijse.techbeats.controller.admin.GuaranteeFormController" minWidth="-Infinity" prefHeight="600.0" prefWidth="840.0" style="-fx-background-color: #130f40;" stylesheets="@../../style/admin/GuaranteeForm.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <ScrollPane layoutX="7.0" layoutY="265.0" prefHeight="328.0" prefWidth="826.0">
+         <content>
+            <TableView prefHeight="315.0" prefWidth="826.0" style="-fx-background-color: #130f40;">
+               <columns>
+                  <TableColumn prefWidth="121.0" text="C1" />
+                  <TableColumn prefWidth="175.0" text="C2" />
+                  <TableColumn prefWidth="252.0" text="C3" />
+               </columns>
+            </TableView>
+         </content>
+         <styleClass>
+            <String fx:value="scroll-bar" />
+            <String fx:value="table-row-cell" />
+         </styleClass>
+      </ScrollPane>
+      <HBox layoutX="26.0" layoutY="208.0" prefHeight="46.0" prefWidth="809.0">
+         <children>
+            <Label prefHeight="33.0" prefWidth="115.0" text="  Guarantee ID" textFill="#c6baba">
+               <font>
+                  <Font size="15.0" />
+               </font>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <HBox.margin>
+                  <Insets right="20.0" />
+               </HBox.margin>
+            </Label>
+            <Label layoutX="10.0" layoutY="10.0" prefHeight="33.0" prefWidth="159.0" text="  Guarantee period" textFill="#c6baba">
+               <font>
+                  <Font size="15.0" />
+               </font>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <HBox.margin>
+                  <Insets right="20.0" />
+               </HBox.margin>
+            </Label>
+            <Label layoutX="125.0" layoutY="10.0" prefHeight="33.0" prefWidth="156.0" text="Item code" textFill="#c6baba">
+               <font>
+                  <Font size="15.0" />
+               </font>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <HBox.margin>
+                  <Insets right="72.0" />
+               </HBox.margin>
+            </Label>
+            <JFXButton prefHeight="31.0" prefWidth="137.0" styleClass="btnAddGuarantee" text="Add Guarantee" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </HBox>
+      <JFXTextField focusColor="#130f40" layoutX="586.0" layoutY="35.0" prefHeight="25.0" prefWidth="234.0" promptText="                                     Search here" styleClass="textField" unFocusColor="#130f40">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </JFXTextField>
+      <JFXButton layoutX="789.0" layoutY="38.0" prefHeight="25.0" prefWidth="24.0" styleClass="btnSearch" text=" " />
+   </children>
+</Pane>

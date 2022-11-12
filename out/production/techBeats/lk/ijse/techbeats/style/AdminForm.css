@@ -1,0 +1,26 @@
+.btnFunction:hover {
+  -fx-background-color: steelblue;
+  -fx-text-fill: #000;
+}
+.btnCancel{
+  -fx-background-image: url(../assets/icons8-close-24.png);
+  -fx-background-repeat: no-repeat;
+  -fx-background-position: center;
+
+}
+
+.table-row-cell {
+  -fx-background-color: #130f40;
+  -fx-border-color: #130f40;
+  -fx-tile-alignment: #130f40;
+}
+.noheader.column-header-background{
+
+  -fx-max-height: 0;
+  -fx-pref-height: 0;
+  -fx-min-height: 0;
+}
+.scroll-bar{
+  -fx-background-color: #130f40;
+  -fx-border-color:#130f40 ;
+}

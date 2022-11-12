@@ -1,0 +1,15 @@
+.textField{
+    -fx-prompt-text-fill: #a9a1a1;
+    -fx-text-fill:#a9a1a1 ;
+}
+.btnAddCustomer {
+    -fx-background-radius: 50px;
+    -fx-border-radius: 50px;
+    -fx-border-color: #19e308;
+}
+.btnAddCustomer:hover{
+    -fx-background-color: #19e308;
+    -fx-text-fill: #000;
+
+
+}

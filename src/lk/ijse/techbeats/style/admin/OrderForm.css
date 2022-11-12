@@ -1,0 +1,38 @@
+.scroll-bar{
+    -fx-background-color: #130f40;
+    -fx-border-color:#130f40 ;
+}
+.table-row-cell {
+    -fx-background-color: #130f40;
+    -fx-border-color: #130f40;
+    -fx-tile-alignment: #130f40;
+}
+
+.btnAddGuarantee{
+    -fx-background-radius: 100px;
+    -fx-border-radius: 100px;
+    -fx-border-color: #19e308;
+
+}
+
+.btnAddGuarantee:hover{
+    -fx-background-color: #19e308;
+    -fx-text-fill: #000;
+
+}
+
+.btnSearch{
+    -fx-background-image: url(../../assets/icons8-search-48.png);
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+
+
+}
+.textField{
+    -fx-border-radius: 20px;
+    -fx-border-color: #726d6d;
+    -fx-background-color:#130f40 ;
+    -fx-prompt-text-fill: #a9a1a1;
+    -fx-text-fill: #a9a1a1;
+
+}
