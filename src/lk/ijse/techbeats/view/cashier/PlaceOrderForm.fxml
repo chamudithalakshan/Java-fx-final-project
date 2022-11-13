@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="600.0" maxWidth="840.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="840.0" style="-fx-background-color: #130f40;" stylesheets="@../../style/cashier/PlaceOrderForm.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.techbeats.controller.cashier.PlaceOrderFormController">
+   <children>
+      <Label layoutX="486.0" layoutY="71.0" text="Select  Item" textFill="#d3c0c0">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <JFXComboBox layoutX="580.0" layoutY="69.0" prefHeight="25.0" prefWidth="198.0" promptText="                       - select -" />
+      <Label layoutX="457.0" layoutY="146.0" text="Select customer" textFill="#d3c0c0">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <JFXComboBox layoutX="580.0" layoutY="144.0" prefHeight="25.0" prefWidth="198.0" promptText="                       - select -" />
+      <TextField layoutX="579.0" layoutY="213.0" prefHeight="25.0" prefWidth="54.0" styleClass="text-field" />
+      <Label layoutX="470.0" layoutY="215.0" text="Available QTY" textFill="#d3c0c0">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <ScrollPane layoutX="1.0" layoutY="399.0" prefHeight="202.0" prefWidth="840.0">
+         <content>
+            <StackPane prefHeight="200.0" prefWidth="836.0">
+               <children>
+                  <TableView prefHeight="200.0" prefWidth="200.0" styleClass="table-row-cell" stylesheets="@../../style/AdminForm.css">
+                    <columns>
+                      <TableColumn prefWidth="132.0" text="Item code" />
+                      <TableColumn prefWidth="136.0" text="Description" />
+                        <TableColumn prefWidth="136.0" text="Unit price" />
+                        <TableColumn prefWidth="136.0" text="Order QTY" />
+                        <TableColumn prefWidth="136.0" text="Total" />
+                    </columns>
+                  </TableView>
+               </children>
+            </StackPane>
+         </content>
+      </ScrollPane>
+      <Label layoutX="470.0" layoutY="279.0" text="Price" textFill="#d3c0c0">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="525.0" layoutY="279.0" prefHeight="25.0" prefWidth="54.0" text=" " textFill="#eb0707">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="633.0" layoutY="281.0" text="QTY" textFill="#d3c0c0">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <TextField layoutX="679.0" layoutY="279.0" prefHeight="25.0" prefWidth="54.0" styleClass="text-field" />
+      <JFXButton layoutX="633.0" layoutY="349.0" styleClass="btnplaceOrder" text="Place Order" textFill="WHITE" />
+      <JFXButton layoutX="733.0" layoutY="349.0" styleClass="btnAddToCart" text="Add to cart" textFill="WHITE" />
+   </children>
+</Pane>
