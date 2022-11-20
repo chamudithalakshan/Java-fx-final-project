@@ -4,22 +4,16 @@
 <?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.Cursor?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.control.ScrollPane?>
-<?import javafx.scene.control.TableColumn?>
-<?import javafx.scene.control.TableView?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
-<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.VBox?>
-<?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="600.0" maxWidth="1130.0" prefHeight="600.0" prefWidth="1130.0" style="-fx-background-color: #130f40;" stylesheets="@../style/AdminForm.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.techbeats.controller.AdminFormController">
+<AnchorPane fx:id="getScene" maxHeight="600.0" maxWidth="1130.0" prefHeight="600.0" prefWidth="1130.0" style="-fx-background-color: #130f40;" stylesheets="@../style/AdminForm.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.techbeats.controller.AdminFormController">
    <children>
-      <BorderPane layoutX="100.0" layoutY="113.0" prefHeight="600.0" prefWidth="1130.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <BorderPane fx:id="borderPane" layoutX="100.0" layoutY="113.0" prefHeight="600.0" prefWidth="1130.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <left>
             <Pane prefHeight="600.0" prefWidth="256.0" style="-fx-background-color: #182C61;" BorderPane.alignment="CENTER">
                <children>
@@ -30,7 +24,7 @@
                   </ImageView>
                   <VBox layoutX="1.0" layoutY="194.0" prefHeight="406.0" prefWidth="255.0">
                      <children>
-                        <JFXButton prefHeight="42.0" prefWidth="255.0" styleClass="btnFunction" text="OverView" textFill="WHITE">
+                        <JFXButton fx:id="btnOverView" onAction="#overViewOnAction" onMouseClicked="#setMouseOnClick" prefHeight="42.0" prefWidth="255.0" styleClass="btnFunction" text="OverView" textFill="WHITE">
                            <cursor>
                               <Cursor fx:constant="HAND" />
                            </cursor>
@@ -44,7 +38,7 @@
                               <FontAwesomeIcon fill="WHITE" iconName="HOME" size="1.4em" />
                            </graphic>
                         </JFXButton>
-                        <JFXButton layoutX="10.0" layoutY="10.0" prefHeight="42.0" prefWidth="255.0" styleClass="btnFunction" text="System reports" textFill="WHITE">
+                        <JFXButton layoutX="10.0" layoutY="10.0" onAction="#btnSystemReport" prefHeight="42.0" prefWidth="255.0" styleClass="btnFunction" text="System reports" textFill="WHITE">
                            <cursor>
                               <Cursor fx:constant="HAND" />
                            </cursor>
@@ -58,7 +52,7 @@
                               <FontAwesomeIcon fill="WHITE" iconName="BOOK" size="1.4em" />
                            </graphic>
                         </JFXButton>
-                        <JFXButton layoutX="10.0" layoutY="52.0" prefHeight="42.0" prefWidth="255.0" styleClass="btnFunction" text="Orders" textFill="WHITE">
+                        <JFXButton layoutX="10.0" layoutY="52.0" onAction="#btnOrdersOnAction" prefHeight="42.0" prefWidth="255.0" styleClass="btnFunction" text="Orders" textFill="WHITE">
                            <cursor>
                               <Cursor fx:constant="HAND" />
                            </cursor>
@@ -72,7 +66,7 @@
                               <FontAwesomeIcon fill="#f8f5f5" iconName="SHOPPING_CART" size="1.4em" />
                            </graphic>
                         </JFXButton>
-                        <JFXButton layoutX="10.0" layoutY="94.0" prefHeight="42.0" prefWidth="255.0" styleClass="btnFunction" text="Repairs" textFill="WHITE">
+                        <JFXButton layoutX="10.0" layoutY="94.0" onAction="#btnRepaireOnAction" prefHeight="42.0" prefWidth="255.0" styleClass="btnFunction" text="Repairs" textFill="WHITE">
                            <cursor>
                               <Cursor fx:constant="HAND" />
                            </cursor>
@@ -86,7 +80,7 @@
                               <FontAwesomeIcon fill="WHITE" iconName="WRENCH" size="1.4em" />
                            </graphic>
                         </JFXButton>
-                        <JFXButton layoutX="10.0" layoutY="136.0" prefHeight="42.0" prefWidth="255.0" styleClass="btnFunction" text="Guarantee" textFill="WHITE">
+                        <JFXButton layoutX="10.0" layoutY="136.0" onAction="#btnGuaranteeOnAction" prefHeight="42.0" prefWidth="255.0" styleClass="btnFunction" text="Guarantee" textFill="WHITE">
                            <cursor>
                               <Cursor fx:constant="HAND" />
                            </cursor>
@@ -100,7 +94,7 @@
                               <FontAwesomeIcon fill="WHITE" iconName="FILE_TEXT" size="1.4em" />
                            </graphic>
                         </JFXButton>
-                        <JFXButton layoutX="10.0" layoutY="178.0" prefHeight="42.0" prefWidth="255.0" styleClass="btnFunction" text="Users" textFill="WHITE">
+                        <JFXButton layoutX="10.0" layoutY="178.0" onAction="#btnUsersOnAction" prefHeight="42.0" prefWidth="255.0" styleClass="btnFunction" text="Users" textFill="WHITE">
                            <cursor>
                               <Cursor fx:constant="HAND" />
                            </cursor>
@@ -114,7 +108,7 @@
                               <FontAwesomeIcon fill="WHITE" iconName="USER" size="1.4em" />
                            </graphic>
                         </JFXButton>
-                        <JFXButton layoutX="10.0" layoutY="220.0" prefHeight="42.0" prefWidth="255.0" styleClass="btnFunction" text="Permission" textFill="WHITE">
+                        <JFXButton layoutX="10.0" layoutY="220.0" onAction="#btnPermissionOnAction" prefHeight="42.0" prefWidth="255.0" styleClass="btnFunction" text="Permission" textFill="WHITE">
                            <cursor>
                               <Cursor fx:constant="HAND" />
                            </cursor>
@@ -128,7 +122,7 @@
                               <FontAwesomeIcon fill="WHITE" iconName="LOCK" size="1.4em" />
                            </graphic>
                         </JFXButton>
-                        <JFXButton layoutX="10.0" layoutY="262.0" prefHeight="42.0" prefWidth="255.0" styleClass="btnFunction" text="Customers" textFill="WHITE">
+                        <JFXButton layoutX="10.0" layoutY="262.0" onAction="#btnCustomerOnAction" prefHeight="42.0" prefWidth="255.0" styleClass="btnFunction" text="Customers" textFill="WHITE">
                            <cursor>
                               <Cursor fx:constant="HAND" />
                            </cursor>
@@ -142,7 +136,7 @@
                               <FontAwesomeIcon fill="WHITE" iconName="USERS" size="1.4em" text="" />
                            </graphic>
                         </JFXButton>
-                        <JFXButton layoutX="10.0" layoutY="304.0" prefHeight="42.0" prefWidth="255.0" styleClass="btnFunction" text="Sign out" textFill="WHITE">
+                        <JFXButton layoutX="10.0" layoutY="304.0" onAction="#btnSignOutOnAction" prefHeight="42.0" prefWidth="255.0" styleClass="btnFunction" text="Sign out" textFill="WHITE">
                            <cursor>
                               <Cursor fx:constant="HAND" />
                            </cursor>
@@ -161,92 +155,6 @@
                </children>
             </Pane>
          </left>
-         <center>
-            <Pane maxHeight="600.0" maxWidth="840.0" prefHeight="600.0" prefWidth="840.0" BorderPane.alignment="CENTER">
-               <children>
-                  <ScrollPane layoutX="-1.0" layoutY="245.0" prefHeight="358.0" prefWidth="856.0" style="-fx-background-color: 4682B4FF;" styleClass="ScrlollPane">
-                     <content>
-                        <TableView prefHeight="357.0" prefWidth="858.0" styleClass="table-row-cell">
-                          <columns>
-                            <TableColumn prefWidth="215.0" text="C1" />
-                            <TableColumn prefWidth="194.0" text="C2" />
-                              <TableColumn prefWidth="194.0" text="C2" />
-                              <TableColumn prefWidth="194.0" text="C2" />
-                          </columns>
-                        </TableView>
-                     </content></ScrollPane>
-                  <Label layoutX="14.0" layoutY="14.0" text="Today Orders" textFill="#adb7b9">
-                     <font>
-                        <Font size="18.0" />
-                     </font>
-                  </Label>
-                  <VBox layoutX="226.0" layoutY="112.0" prefHeight="81.0" prefWidth="116.0">
-                     <children>
-                        <Label prefHeight="40.0" prefWidth="100.0" text="    0 " textFill="#2e95b2">
-                           <font>
-                              <Font size="33.0" />
-                           </font>
-                        </Label>
-                        <Label prefHeight="42.0" prefWidth="117.0" text="Total Orders" textFill="#91989a">
-                           <font>
-                              <Font size="17.0" />
-                           </font>
-                        </Label>
-                     </children>
-                  </VBox>
-                  <VBox layoutX="592.0" layoutY="112.0" prefHeight="81.0" prefWidth="152.0">
-                     <children>
-                        <Label prefHeight="40.0" prefWidth="100.0" text="      0 " textFill="#b23462">
-                           <font>
-                              <Font size="33.0" />
-                           </font>
-                        </Label>
-                        <Label prefHeight="42.0" prefWidth="137.0" text="  Total Repaires" textFill="#91989a">
-                           <font>
-                              <Font size="17.0" />
-                           </font>
-                        </Label>
-                     </children>
-                  </VBox>
-                  <HBox layoutX="6.0" layoutY="208.0" prefHeight="37.0" prefWidth="868.0">
-                     <children>
-                        <Label graphicTextGap="0.0" prefHeight="37.0" prefWidth="184.0" text="Customer ID" textFill="#91989a">
-                           <font>
-                              <Font size="14.0" />
-                           </font>
-                           <HBox.margin>
-                              <Insets right="39.0" />
-                           </HBox.margin>
-                        </Label>
-                        <Label graphicTextGap="0.0" layoutX="10.0" layoutY="10.0" prefHeight="37.0" prefWidth="179.0" text="Order ID" textFill="#91989a">
-                           <font>
-                              <Font size="14.0" />
-                           </font>
-                           <HBox.margin>
-                              <Insets right="17.0" />
-                           </HBox.margin>
-                        </Label>
-                        <Label graphicTextGap="0.0" layoutX="127.0" layoutY="10.0" prefHeight="37.0" prefWidth="153.0" text="        Quantity" textFill="#91989a">
-                           <font>
-                              <Font size="14.0" />
-                           </font>
-                           <HBox.margin>
-                              <Insets right="39.0" />
-                           </HBox.margin>
-                        </Label>
-                        <Label graphicTextGap="0.0" layoutX="244.0" layoutY="10.0" prefHeight="37.0" prefWidth="201.0" text="    Order Date" textFill="#91989a">
-                           <font>
-                              <Font size="14.0" />
-                           </font>
-                           <HBox.margin>
-                              <Insets right="39.0" />
-                           </HBox.margin>
-                        </Label>
-                     </children>
-                  </HBox>
-               </children>
-            </Pane>
-         </center>
       </BorderPane>
    </children>
 </AnchorPane>

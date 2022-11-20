@@ -3,6 +3,7 @@
 <?import com.jfoenix.controls.JFXButton?>
 <?import com.jfoenix.controls.JFXTextField?>
 <?import java.lang.String?>
+<?import java.net.URL?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ScrollPane?>
@@ -12,16 +13,21 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<Pane maxHeight="600.0" maxWidth="840.0" minHeight="-Infinity" fx:controller="lk.ijse.techbeats.controller.admin.GuaranteeFormController" minWidth="-Infinity" prefHeight="600.0" prefWidth="840.0" style="-fx-background-color: #130f40;" stylesheets="@../../style/admin/GuaranteeForm.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+<Pane maxHeight="600.0" maxWidth="840.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="840.0" style="-fx-background-color: #130f40;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.techbeats.controller.admin.GuaranteeFormController">
    <children>
       <ScrollPane layoutX="7.0" layoutY="265.0" prefHeight="328.0" prefWidth="826.0">
          <content>
-            <TableView prefHeight="315.0" prefWidth="826.0" style="-fx-background-color: #130f40;">
+            <TableView fx:id="tblGuarantee" prefHeight="315.0" prefWidth="826.0" style="-fx-background-color: #130f40;">
                <columns>
-                  <TableColumn prefWidth="121.0" text="C1" />
-                  <TableColumn prefWidth="175.0" text="C2" />
-                  <TableColumn prefWidth="252.0" text="C3" />
+                  <TableColumn fx:id="GuaranteeId" prefWidth="121.0" text="C1" />
+                  <TableColumn fx:id="guaranteeperiod" prefWidth="175.0" text="C2" />
+                  <TableColumn fx:id="ItemCode" prefWidth="252.0" text="C3" />
                </columns>
+               <styleClass>
+                  <String fx:value="noheader" />
+                  <String fx:value="my-table" />
+                  <String fx:value="table-row-cell" />
+               </styleClass>
             </TableView>
          </content>
          <styleClass>
@@ -64,7 +70,7 @@
                   <Insets right="72.0" />
                </HBox.margin>
             </Label>
-            <JFXButton prefHeight="31.0" prefWidth="137.0" styleClass="btnAddGuarantee" text="Add Guarantee" textFill="WHITE">
+            <JFXButton onAction="#btnAddGuarantee" prefHeight="31.0" prefWidth="137.0" styleClass="btnAddGuarantee" text="Add Guarantee" textFill="WHITE">
                <font>
                   <Font size="14.0" />
                </font>
@@ -78,4 +84,8 @@
       </JFXTextField>
       <JFXButton layoutX="789.0" layoutY="38.0" prefHeight="25.0" prefWidth="24.0" styleClass="btnSearch" text=" " />
    </children>
+   <stylesheets>
+      <URL value="@../../style/admin/GuaranteeForm.css" />
+      <URL value="@../../style/admin/OrderForm.css" />
+   </stylesheets>
 </Pane>

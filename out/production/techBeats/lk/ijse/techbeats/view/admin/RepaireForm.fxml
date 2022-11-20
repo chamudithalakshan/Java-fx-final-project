@@ -2,6 +2,7 @@
 
 <?import com.jfoenix.controls.JFXButton?>
 <?import com.jfoenix.controls.JFXTextField?>
+<?import java.lang.String?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ScrollPane?>
@@ -11,18 +12,22 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-
-<Pane maxHeight="600.0" maxWidth="840.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="840.0" style="-fx-background-color: #130f40;" stylesheets="@../../style/admin/RepaireForm.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+<Pane maxHeight="600.0" maxWidth="840.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="840.0" style="-fx-background-color: #130f40;" stylesheets="@../../style/admin/RepaireForm.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.techbeats.controller.admin.RepaireFormController">
    <children>
       <ScrollPane layoutX="-1.0" layoutY="266.0" prefHeight="334.0" prefWidth="840.0">
          <content>
-            <TableView prefHeight="321.0" prefWidth="840.0" style="-fx-background-color: #130f40;">
+            <TableView fx:id="repaireTable" prefHeight="321.0" prefWidth="840.0" style="-fx-background-color: #130f40;" stylesheets="@../../style/admin/OrderForm.css">
               <columns>
-                <TableColumn prefWidth="146.0" text="C1" />
-                <TableColumn minWidth="0.0" prefWidth="173.0" text="C2" />
-                  <TableColumn minWidth="0.0" prefWidth="270.0" text="C2" />
-                  <TableColumn minWidth="0.0" prefWidth="131.0" text="C2" />
+                <TableColumn fx:id="repaireId" prefWidth="146.0" text="C1" />
+                <TableColumn fx:id="customerId" minWidth="0.0" prefWidth="173.0" text="C2" />
+                  <TableColumn fx:id="repaireType" minWidth="0.0" prefWidth="270.0" text="C2" />
+                  <TableColumn fx:id="cost" minWidth="0.0" prefWidth="131.0" text="C2" />
               </columns>
+               <styleClass>
+                  <String fx:value="noheader" />
+                  <String fx:value="table-row-cell" />
+                  <String fx:value="my-table" />
+               </styleClass>
             </TableView>
          </content>
       </ScrollPane>

@@ -12,16 +12,17 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<Pane maxHeight="600.0" maxWidth="840.0" minHeight="-Infinity" fx:controller="lk.ijse.techbeats.controller.admin.CustomerFormController" minWidth="-Infinity" prefHeight="600.0" prefWidth="840.0" style="-fx-background-color: #130f40;" stylesheets="@../../style/admin/CustomerForm.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+<Pane maxHeight="600.0" maxWidth="840.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="840.0" style="-fx-background-color: #130f40;" stylesheets="@../../style/admin/CustomerForm.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.techbeats.controller.admin.CustomerFormController">
    <children>
       <ScrollPane layoutX="7.0" layoutY="272.0" prefHeight="328.0" prefWidth="826.0">
          <content>
-            <TableView prefHeight="315.0" prefWidth="826.0" style="-fx-background-color: #130f40;">
+            <TableView fx:id="tblCustomer" prefHeight="315.0" prefWidth="826.0" style="-fx-background-color: #130f40;">
               <columns>
-                <TableColumn prefWidth="121.0" text="C1" />
-                <TableColumn prefWidth="175.0" text="C2" />
-                  <TableColumn prefWidth="252.0" text="C3" />
-                  <TableColumn prefWidth="164.0" text="C4" />
+                <TableColumn fx:id="custId" prefWidth="121.0" text="C1" />
+                <TableColumn fx:id="custName" prefWidth="175.0" text="C2" />
+                  <TableColumn fx:id="custAddress" prefWidth="252.0" text="C3" />
+                  <TableColumn fx:id="contactNmb" prefWidth="150.0" text="C4" />
+                  <TableColumn fx:id="deleteBtn" prefWidth="100.0" text="C4" />
               </columns>
             </TableView>
          </content>
@@ -76,7 +77,7 @@
                   <Insets right="20.0" />
                </HBox.margin>
             </Label>
-            <JFXButton prefHeight="31.0" prefWidth="111.0" styleClass="btnAddCustomer" text="Add customer" textFill="WHITE">
+            <JFXButton onAction="#btnAddCustomer" prefHeight="31.0" prefWidth="111.0" styleClass="btnAddCustomer" text="Add customer" textFill="WHITE">
                <font>
                   <Font size="14.0" />
                </font>

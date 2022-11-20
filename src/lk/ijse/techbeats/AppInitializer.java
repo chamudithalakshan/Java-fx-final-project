@@ -17,7 +17,7 @@ public class AppInitializer extends Application {
 
     @Override
     public void start(Stage primaryStage) throws IOException {
-        Parent load = FXMLLoader.load(getClass().getResource("view/SplashScreen.fxml"));
+        Parent load = FXMLLoader.load(getClass().getResource("../techbeats/view/AdminForm.fxml "));
         primaryStage.setScene(new Scene(load));
         primaryStage.initStyle(StageStyle.UNDECORATED);
         primaryStage.show();

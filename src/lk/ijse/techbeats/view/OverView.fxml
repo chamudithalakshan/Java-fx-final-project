@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="600.0" maxWidth="840.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="840.0" style="-fx-background-color: #130f40;" stylesheets="@../style/admin/OrderForm.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.techbeats.controller.admin.OverViewController">
+        <children>
+            <ScrollPane layoutX="-1.0" layoutY="245.0" prefHeight="358.0" prefWidth="840.0" style="-fx-background-color: 4682B4FF;" styleClass="ScrlollPane">
+                <content>
+                    <TableView fx:id="tblOverview" prefHeight="339.0" prefWidth="843.0">
+                        <columns>
+                            <TableColumn fx:id="cid" prefWidth="215.0" text="C1" />
+                            <TableColumn fx:id="orderId" prefWidth="194.0" />
+                            <TableColumn fx:id="qty" prefWidth="194.0" text="C2" />
+                            <TableColumn fx:id="orderDate" prefWidth="194.0" text="C2" />
+                        </columns>
+               <styleClass>
+                  <String fx:value="table-row-cell" />
+                  <String fx:value="table-row-cell" />
+                  <String fx:value="noheader" />
+                  <String fx:value="my-table" />
+               </styleClass>
+                    </TableView>
+                </content></ScrollPane>
+            <Label layoutX="14.0" layoutY="14.0" text="Today Orders" textFill="#adb7b9">
+                <font>
+                    <Font size="18.0" />
+                </font>
+            </Label>
+            <VBox layoutX="226.0" layoutY="112.0" prefHeight="81.0" prefWidth="116.0">
+                <children>
+                    <Label fx:id="lblTotalOrder" prefHeight="40.0" prefWidth="100.0" text="    0 " textFill="#2e95b2">
+                        <font>
+                            <Font size="33.0" />
+                        </font>
+                    </Label>
+                    <Label prefHeight="42.0" prefWidth="117.0" text="Total Orders" textFill="#91989a">
+                        <font>
+                            <Font size="17.0" />
+                        </font>
+                    </Label>
+                </children>
+            </VBox>
+            <VBox layoutX="592.0" layoutY="112.0" prefHeight="81.0" prefWidth="152.0">
+                <children>
+                    <Label fx:id="lblTotalRepaire" prefHeight="40.0" prefWidth="100.0" text="      0 " textFill="#b23462">
+                        <font>
+                            <Font size="33.0" />
+                        </font>
+                    </Label>
+                    <Label prefHeight="42.0" prefWidth="137.0" text="  Total Repaires" textFill="#91989a">
+                        <font>
+                            <Font size="17.0" />
+                        </font>
+                    </Label>
+                </children>
+            </VBox>
+            <HBox layoutX="6.0" layoutY="208.0" prefHeight="37.0" prefWidth="868.0">
+                <children>
+                    <Label graphicTextGap="0.0" prefHeight="37.0" prefWidth="184.0" text="Customer ID" textFill="#91989a">
+                        <font>
+                            <Font size="14.0" />
+                        </font>
+                        <HBox.margin>
+                            <Insets right="39.0" />
+                        </HBox.margin>
+                    </Label>
+                    <Label graphicTextGap="0.0" layoutX="10.0" layoutY="10.0" prefHeight="37.0" prefWidth="179.0" text="Order ID" textFill="#91989a">
+                        <font>
+                            <Font size="14.0" />
+                        </font>
+                        <HBox.margin>
+                            <Insets right="17.0" />
+                        </HBox.margin>
+                    </Label>
+                    <Label graphicTextGap="0.0" layoutX="127.0" layoutY="10.0" prefHeight="37.0" prefWidth="153.0" text="        Quantity" textFill="#91989a">
+                        <font>
+                            <Font size="14.0" />
+                        </font>
+                        <HBox.margin>
+                            <Insets right="39.0" />
+                        </HBox.margin>
+                    </Label>
+                    <Label graphicTextGap="0.0" layoutX="244.0" layoutY="10.0" prefHeight="37.0" prefWidth="201.0" text="    Order Date" textFill="#91989a">
+                        <font>
+                            <Font size="14.0" />
+                        </font>
+                        <HBox.margin>
+                            <Insets right="39.0" />
+                        </HBox.margin>
+                    </Label>
+                </children>
+            </HBox>
+        </children>
+    </Pane>

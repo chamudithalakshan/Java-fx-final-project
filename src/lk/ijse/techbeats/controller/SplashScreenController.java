@@ -20,6 +20,7 @@ public class SplashScreenController implements Initializable {
 
     public void initialize(URL location, ResourceBundle resources) {
         start();
+
     }
 
     private void start() {
