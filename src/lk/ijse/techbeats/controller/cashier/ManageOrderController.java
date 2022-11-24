@@ -109,7 +109,7 @@ public class ManageOrderController implements Initializable {
                         rst.getString(4),
                         rst.getString(1),
                         rst.getDate(3),
-                        rst.getDouble(6),
+                        rst.getDouble(2),
                         btn
                 ));
             }

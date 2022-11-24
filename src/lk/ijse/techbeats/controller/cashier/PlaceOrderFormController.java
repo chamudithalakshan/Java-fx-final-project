@@ -10,14 +10,14 @@ import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import lk.ijse.techbeats.db.DbConnection;
 import lk.ijse.techbeats.model.CartTm;
+import lk.ijse.techbeats.model.ItemDetails;
 import lk.ijse.techbeats.model.ItemTm;
+import lk.ijse.techbeats.model.PlaceOrder;
 
 import java.net.URL;
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
+import java.sql.*;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.ResourceBundle;
 
 public class PlaceOrderFormController implements Initializable {
@@ -112,13 +112,93 @@ public class PlaceOrderFormController implements Initializable {
     }
 
     @FXML
-    void btnPlaceOrderOnAction(ActionEvent event) throws SQLException, ClassNotFoundException {
-        ArrayList<ItemTm> objects = new ArrayList<>();
+    void btnPlaceOrderOnAction(ActionEvent event) throws SQLException,NullPointerException, ClassNotFoundException {
+        ArrayList<ItemDetails> items = new ArrayList<>();
+        double total=0;
+        int totalQty=0;
+        for (CartTm tm :
+                obs) {
+            items.add(new ItemDetails(
+                    tm.getItemCode(),
+                    tm.getDescription(),
+                    "gtx",
+                    tm.getUnitPrice(),
+                    getItem(tm.getItemCode()).getQtyOnHand()-tm.getOrderQty(),
+                    tm.getOrderQty()
+            ));
+//            System.out.println(getItem(tm.getItemCode()).getQtyOnHand()-tm.getOrderQty());
+            total += tm.getTotal();
+            totalQty += tm.getOrderQty();
+        }
+
+        PlaceOrder placeOrder = new PlaceOrder(
+                getOrderId(),
+                total,
+                new Date(),
+                cmbSelectCustomer.getValue(),
+                totalQty,
+                items
+
+        );
 
 
         Connection connection = DbConnection.getInstance().getConnection();
+        connection.setAutoCommit(false);
+        PreparedStatement pst = connection.prepareStatement("insert into `order` values (?,?,?,?,?)");
+        pst.setObject(1,placeOrder.getOrderId());
+        pst.setObject(2,placeOrder.getTotal_price());
+        pst.setObject(3,placeOrder.getDate());
+        pst.setObject(4,placeOrder.getCustId());
+        pst.setObject(5,placeOrder.getQty());
+
+        if (pst.executeUpdate()>0){
+            if (orderDetailsInit(placeOrder)){
+                connection.commit();
+                Alert alert=new Alert(Alert.AlertType.CONFIRMATION);
+                alert.show();
+            }else {
+                connection.rollback();
+            }
+        }else {
+            connection.rollback();
+        }
 
 
+    }
+
+    private boolean orderDetailsInit(PlaceOrder placeOrder) {
+        try {
+            Connection connection = DbConnection.getInstance().getConnection();
+            for (int i = 0; i < placeOrder.getObjects().size(); i++) {
+                PreparedStatement pst = connection.prepareStatement("insert into order_details values (?,?,?)");
+                pst.setObject(1,placeOrder.getOrderId());
+                pst.setObject(2,placeOrder.getObjects().get(i).getCode());
+                pst.setObject(3,placeOrder.getObjects().get(i).getOrderedQty());
+
+                if (pst.executeUpdate()>0 && updateItem(placeOrder.getObjects().get(i))){
+                    return true;
+                }
+            }
+        } catch (ClassNotFoundException | SQLException e) {
+            throw new RuntimeException(e);
+        }
+        return false;
+    }
+
+    private boolean updateItem(ItemDetails itemDetails) {
+        try {
+            Connection connection = DbConnection.getInstance().getConnection();
+            PreparedStatement pst = connection.prepareStatement("update item set item_qty=? where item_code=?");
+            System.out.println(itemDetails.getQtyOnHand()+""+itemDetails.getOrderedQty());
+            pst.setObject(1,itemDetails.getQtyOnHand());
+            pst.setObject(2,itemDetails.getCode());
+            if (pst.executeUpdate()>0){
+                return true;
+            }
+        } catch (ClassNotFoundException | SQLException e) {
+            throw new RuntimeException(e);
+        }
+        return false;
     }
 
     @Override
@@ -199,5 +279,29 @@ public class PlaceOrderFormController implements Initializable {
         tblCart.setItems(obs);
 
 
+    }
+
+    public String getOrderId() throws SQLException, ClassNotFoundException {
+        ResultSet rst = DbConnection.getInstance()
+                .getConnection().prepareStatement(
+                        "SELECT id FROM `order` ORDER BY id DESC LIMIT 1"
+                ).executeQuery();
+
+        if (rst.next()) {
+
+            int tempId = Integer.
+                    parseInt(rst.getString(1).split("-")[1]);
+            tempId = tempId + 1;
+            if (tempId < 9) {
+                return "O-00" + tempId;
+            } else if (tempId < 99) {
+                return "O-0" + tempId;
+            } else {
+                return "O-" + tempId;
+            }
+
+        } else {
+            return "O-001";
+        }
     }
 }
