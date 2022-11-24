@@ -16,13 +16,14 @@
     <children>
         <ScrollPane layoutX="7.0" layoutY="272.0" prefHeight="328.0" prefWidth="826.0">
             <content>
-                <TableView prefHeight="315.0" prefWidth="826.0" style="-fx-background-color: #130f40;">
+                <TableView fx:id="tblitem" prefHeight="315.0" prefWidth="826.0" style="-fx-background-color: #130f40;">
                     <columns>
-                        <TableColumn prefWidth="102.0" text="C1" />
-                        <TableColumn prefWidth="194.0" text="C2" />
-                        <TableColumn prefWidth="111.0" text="C3" />
-                        <TableColumn prefWidth="120.0" text="C4" />
-                  <TableColumn prefWidth="120.0" text="C4" />
+                        <TableColumn fx:id="itemCode" prefWidth="102.0" text="C1" />
+                        <TableColumn fx:id="description" prefWidth="194.0" text="C2" />
+                        <TableColumn fx:id="barand" prefWidth="111.0" text="C3" />
+                        <TableColumn fx:id="unitPrice" prefWidth="120.0" text="C4" />
+                  <TableColumn fx:id="qty" prefWidth="120.0" text="C4" />
+                  <TableColumn fx:id="btnDelete" prefWidth="120.0" text="C4" />
                     </columns>
                 </TableView>
             </content>
@@ -88,7 +89,7 @@
                   <Insets right="46.0" />
                </HBox.margin>
             </Label>
-                <JFXButton prefHeight="31.0" prefWidth="111.0" styleClass="btnAddCustomer" text="Add Item" textFill="WHITE">
+                <JFXButton onAction="#btmAddItem" prefHeight="31.0" prefWidth="111.0" styleClass="btnAddCustomer" text="Add Item" textFill="WHITE">
                     <font>
                         <Font size="14.0" />
                     </font>

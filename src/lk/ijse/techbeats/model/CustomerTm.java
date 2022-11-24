@@ -1,4 +1,4 @@
-package lk.ijse.techbeats.tm;
+package lk.ijse.techbeats.model;
 
 import javafx.scene.control.Button;
 

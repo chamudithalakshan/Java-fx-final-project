@@ -7,8 +7,8 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
-import lk.ijse.techbeats.tm.OverviewTm;
-import lk.ijse.techbeats.tm.RepaireTm;
+import lk.ijse.techbeats.model.OverviewTm;
+import lk.ijse.techbeats.model.RepaireTm;
 import lk.ijse.techbeats.util.GetItems;
 
 import java.net.URL;

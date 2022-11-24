@@ -18,7 +18,8 @@ public class CashierFormController implements Initializable {
     public BorderPane boarderPane;
     public AnchorPane getScene;
 
-    public void btnOverView(ActionEvent actionEvent) {
+    public void btnOverView(ActionEvent actionEvent) throws IOException {
+        boarderPane.setCenter(FXMLLoader.load(getClass().getResource("/lk/ijse/techbeats/view/OverView.fxml")));
     }
 
     public void btnManageOrder(ActionEvent actionEvent) throws IOException {

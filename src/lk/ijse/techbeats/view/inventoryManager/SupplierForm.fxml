@@ -16,13 +16,14 @@
     <children>
         <ScrollPane layoutX="7.0" layoutY="272.0" prefHeight="328.0" prefWidth="826.0">
             <content>
-                <TableView prefHeight="315.0" prefWidth="826.0" style="-fx-background-color: #130f40;">
+                <TableView fx:id="tblSupplier" prefHeight="315.0" prefWidth="826.0" style="-fx-background-color: #130f40;">
                     <columns>
-                        <TableColumn prefWidth="121.0" text="C1" />
-                        <TableColumn prefWidth="175.0" text="C2" />
-                        <TableColumn prefWidth="212.0" text="C3" />
-                        <TableColumn prefWidth="170.0" text="C4" />
-                  <TableColumn prefWidth="128.0" text="C5" />
+                        <TableColumn fx:id="supplierId" prefWidth="121.0" text="C1" />
+                        <TableColumn fx:id="itemCode" prefWidth="138.0" text="C2" />
+                        <TableColumn fx:id="supplierAddress" prefWidth="177.0" text="C3" />
+                        <TableColumn fx:id="contactnmb" prefWidth="182.0" text="C4" />
+                  <TableColumn fx:id="name" prefWidth="127.0" text="C5" />
+                  <TableColumn fx:id="deleteBtn" prefWidth="58.0" text="C5" />
                     </columns>
                 </TableView>
             </content>
@@ -93,7 +94,7 @@
             </font>
         </JFXTextField>
         <JFXButton layoutX="779.0" layoutY="28.0" prefHeight="25.0" prefWidth="24.0" styleClass="btnSearch" text=" " />
-          <JFXButton layoutX="692.0" layoutY="168.0" prefHeight="31.0" prefWidth="111.0" styleClass="btnAddCustomer" text="Add supplier" textFill="WHITE">
+          <JFXButton layoutX="692.0" layoutY="168.0" onAction="#btnAddSupplier" prefHeight="31.0" prefWidth="111.0" styleClass="btnAddCustomer" text="Add supplier" textFill="WHITE">
               <font>
                   <Font size="14.0" />
               </font>

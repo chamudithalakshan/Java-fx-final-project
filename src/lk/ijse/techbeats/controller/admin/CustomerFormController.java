@@ -15,8 +15,7 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 import lk.ijse.techbeats.db.DbConnection;
-import lk.ijse.techbeats.tm.CustomerTm;
-import lk.ijse.techbeats.tm.OrderTm;
+import lk.ijse.techbeats.model.CustomerTm;
 
 import java.io.IOException;
 import java.net.URL;
@@ -24,7 +23,6 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.Observable;
 import java.util.ResourceBundle;
 
 public class CustomerFormController implements Initializable {
@@ -105,7 +103,7 @@ public class CustomerFormController implements Initializable {
         }
     }
 
-    private void deleteCustomer(CustomerTm selectedItem) {
+    private void  deleteCustomer(CustomerTm selectedItem) {
         try {
             Connection connection = DbConnection.getInstance().getConnection();
             PreparedStatement pst = connection.prepareStatement("delete from customer where c_id=?");

@@ -3,6 +3,7 @@
 <?import com.jfoenix.controls.JFXButton?>
 <?import com.jfoenix.controls.JFXTextField?>
 <?import java.lang.String?>
+<?import java.net.URL?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ScrollPane?>
@@ -12,7 +13,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<Pane maxHeight="600.0" maxWidth="840.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="840.0" style="-fx-background-color: #130f40;" stylesheets="@../../style/admin/CustomerForm.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.techbeats.controller.admin.CustomerFormController">
+<Pane maxHeight="600.0" maxWidth="840.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="840.0" style="-fx-background-color: #130f40;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.techbeats.controller.admin.CustomerFormController">
    <children>
       <ScrollPane layoutX="7.0" layoutY="272.0" prefHeight="328.0" prefWidth="826.0">
          <content>
@@ -91,4 +92,13 @@
       </JFXTextField>
       <JFXButton layoutX="779.0" layoutY="28.0" prefHeight="25.0" prefWidth="24.0" styleClass="btnSearch" text=" " />
    </children>
+   <stylesheets>
+      <URL value="@../../style/admin/CustomerForm.css" />
+      <URL value="@../../style/admin/OrderForm.css" />
+   </stylesheets>
+   <styleClass>
+      <String fx:value="my-table" />
+      <String fx:value="noheader" />
+      <String fx:value="table-row-cell" />
+   </styleClass>
 </Pane>

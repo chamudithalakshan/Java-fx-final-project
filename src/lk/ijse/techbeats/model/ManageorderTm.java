@@ -1,11 +1,11 @@
-package lk.ijse.techbeats.tm;
+package lk.ijse.techbeats.model;
 
 
 import javafx.scene.control.Button;
 
 import java.sql.Date;
 
-public class OrderTm {
+public class ManageorderTm {
     private String custId;
     private String orderId;
     private Date orderDate;
@@ -13,7 +13,7 @@ public class OrderTm {
 
     private Button btnDelete;
 
-    public OrderTm(String custId, String orderId, Date orderDate, double cost, Button btnDelete) {
+    public ManageorderTm(String custId, String orderId, Date orderDate, double cost, Button btnDelete) {
         this.custId = custId;
         this.orderId = orderId;
         this.orderDate = orderDate;
@@ -21,7 +21,7 @@ public class OrderTm {
         this.btnDelete = btnDelete;
     }
 
-    public OrderTm() {
+    public ManageorderTm() {
     }
 
     public String getCustId() {

@@ -1,11 +1,9 @@
 package lk.ijse.techbeats.util;
 
 import javafx.collections.ObservableList;
-import javafx.scene.control.Button;
 import lk.ijse.techbeats.db.DbConnection;
-import lk.ijse.techbeats.tm.OrderTm;
-import lk.ijse.techbeats.tm.OverviewTm;
-import lk.ijse.techbeats.tm.RepaireTm;
+import lk.ijse.techbeats.model.OverviewTm;
+import lk.ijse.techbeats.model.RepaireTm;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;

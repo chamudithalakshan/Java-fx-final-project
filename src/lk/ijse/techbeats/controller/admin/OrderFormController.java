@@ -11,8 +11,7 @@ import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.control.cell.TextFieldTableCell;
 import lk.ijse.techbeats.db.DbConnection;
-import lk.ijse.techbeats.tm.OrderTm;
-import lk.ijse.techbeats.util.GetItems;
+import lk.ijse.techbeats.model.OrderTm;
 
 import java.net.URL;
 import java.sql.Connection;

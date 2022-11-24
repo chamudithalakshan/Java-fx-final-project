@@ -1,6 +1,4 @@
-package lk.ijse.techbeats.tm;
-
-import java.util.Date;
+package lk.ijse.techbeats.model;
 
 public class RepaireTm {
     private String repairId;

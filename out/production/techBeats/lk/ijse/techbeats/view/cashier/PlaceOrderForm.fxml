@@ -18,14 +18,14 @@
             <Font size="15.0" />
          </font>
       </Label>
-      <JFXComboBox layoutX="580.0" layoutY="69.0" prefHeight="25.0" prefWidth="198.0" promptText="                       - select -" />
+      <JFXComboBox fx:id="cmbSelectItem" layoutX="580.0" layoutY="69.0" onAction="#cmbOnItemSelect" prefHeight="25.0" prefWidth="198.0" promptText="                       - select -" />
       <Label layoutX="457.0" layoutY="146.0" text="Select customer" textFill="#d3c0c0">
          <font>
             <Font size="15.0" />
          </font>
       </Label>
-      <JFXComboBox layoutX="580.0" layoutY="144.0" prefHeight="25.0" prefWidth="198.0" promptText="                       - select -" />
-      <TextField layoutX="579.0" layoutY="213.0" prefHeight="25.0" prefWidth="54.0" styleClass="text-field" />
+      <JFXComboBox fx:id="cmbSelectCustomer" layoutX="580.0" layoutY="144.0" prefHeight="25.0" prefWidth="198.0" promptText="                       - select -" />
+      <TextField fx:id="lblAvailableQty" editable="false" layoutX="579.0" layoutY="213.0" prefHeight="25.0" prefWidth="54.0" styleClass="text-field" />
       <Label layoutX="470.0" layoutY="215.0" text="Available QTY" textFill="#d3c0c0">
          <font>
             <Font size="15.0" />
@@ -35,13 +35,14 @@
          <content>
             <StackPane prefHeight="200.0" prefWidth="836.0">
                <children>
-                  <TableView prefHeight="200.0" prefWidth="200.0" styleClass="table-row-cell" stylesheets="@../../style/AdminForm.css">
+                  <TableView fx:id="tblCart" prefHeight="200.0" prefWidth="200.0" styleClass="table-row-cell" stylesheets="@../../style/AdminForm.css">
                     <columns>
-                      <TableColumn prefWidth="132.0" text="Item code" />
-                      <TableColumn prefWidth="136.0" text="Description" />
-                        <TableColumn prefWidth="136.0" text="Unit price" />
-                        <TableColumn prefWidth="136.0" text="Order QTY" />
-                        <TableColumn prefWidth="136.0" text="Total" />
+                      <TableColumn fx:id="itemCode" prefWidth="132.0" text="Item code" />
+                      <TableColumn fx:id="description" prefWidth="136.0" text="Description" />
+                        <TableColumn fx:id="unitPrice" prefWidth="136.0" text="Unit price" />
+                        <TableColumn fx:id="orderQty" prefWidth="136.0" text="Order QTY" />
+                        <TableColumn fx:id="total" prefWidth="136.0" text="Total" />
+                        <TableColumn fx:id="deleteBtn" prefWidth="136.0" text="Total" />
                     </columns>
                   </TableView>
                </children>
@@ -53,7 +54,7 @@
             <Font size="15.0" />
          </font>
       </Label>
-      <Label layoutX="525.0" layoutY="279.0" prefHeight="25.0" prefWidth="54.0" text=" " textFill="#eb0707">
+      <Label fx:id="lblPrice" layoutX="525.0" layoutY="279.0" prefHeight="25.0" prefWidth="54.0" text=" " textFill="#eb0707">
          <font>
             <Font size="15.0" />
          </font>
@@ -63,8 +64,14 @@
             <Font size="15.0" />
          </font>
       </Label>
-      <TextField layoutX="679.0" layoutY="279.0" prefHeight="25.0" prefWidth="54.0" styleClass="text-field" />
-      <JFXButton layoutX="633.0" layoutY="349.0" styleClass="btnplaceOrder" text="Place Order" textFill="WHITE" />
-      <JFXButton layoutX="733.0" layoutY="349.0" styleClass="btnAddToCart" text="Add to cart" textFill="WHITE" />
+      <TextField fx:id="Qty" layoutX="679.0" layoutY="279.0" prefHeight="25.0" prefWidth="54.0" styleClass="text-field" />
+      <JFXButton layoutX="633.0" layoutY="349.0" onAction="#btnPlaceOrderOnAction" styleClass="btnplaceOrder" text="Place Order" textFill="WHITE" />
+      <JFXButton layoutX="733.0" layoutY="349.0" onAction="#btnAddToCartOnAction" styleClass="btnAddToCart" text="Add to cart" textFill="WHITE" />
+      <Label layoutX="294.0" layoutY="279.0" text="Discount" textFill="#d3c0c0">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtDiscount" layoutX="362.0" layoutY="277.0" prefHeight="25.0" prefWidth="58.0" />
    </children>
 </Pane>

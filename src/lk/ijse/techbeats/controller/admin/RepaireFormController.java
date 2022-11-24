@@ -2,14 +2,12 @@ package lk.ijse.techbeats.controller.admin;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
-import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
-import javafx.scene.control.cell.TextFieldTableCell;
-import lk.ijse.techbeats.tm.RepaireTm;
+import lk.ijse.techbeats.model.RepaireTm;
 import lk.ijse.techbeats.util.GetItems;
 
 import java.net.URL;
