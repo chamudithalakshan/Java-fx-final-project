@@ -42,7 +42,7 @@
                         <TableColumn fx:id="unitPrice" prefWidth="136.0" text="Unit price" />
                         <TableColumn fx:id="orderQty" prefWidth="136.0" text="Order QTY" />
                         <TableColumn fx:id="total" prefWidth="136.0" text="Total" />
-                        <TableColumn fx:id="deleteBtn" prefWidth="136.0" text="Total" />
+                        <TableColumn fx:id="deleteBtn" prefWidth="136.0" />
                     </columns>
                   </TableView>
                </children>

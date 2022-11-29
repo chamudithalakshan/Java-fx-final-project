@@ -23,26 +23,20 @@ import java.util.regex.Pattern;
 
 public class OrderFormController implements Initializable {
     public TableColumn btnDelete;
-    @FXML
-    private TableView<OrderTm> tblOrder;
-
-    @FXML
-    private TableColumn orderId;
-
-    @FXML
-    private TableColumn custId;
-
-    @FXML
-    private TableColumn orderDate;
-
-    @FXML
-    private TableColumn cost;
-
     Pattern id = Pattern.compile("^(R-)[0-9]{3,4}$");
     Pattern type = Pattern.compile("^(.|\\s)*[a-zA-Z]+(.|\\s)*$");
     Pattern cost1 = Pattern.compile("^[1-9][0-9]*([.][0-9]{1,2})?$");
     ObservableList<OrderTm> obs = FXCollections.observableArrayList();
-
+    @FXML
+    private TableView<OrderTm> tblOrder;
+    @FXML
+    private TableColumn orderId;
+    @FXML
+    private TableColumn custId;
+    @FXML
+    private TableColumn orderDate;
+    @FXML
+    private TableColumn cost;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -76,7 +70,7 @@ public class OrderFormController implements Initializable {
         cost.setCellValueFactory(new PropertyValueFactory<>("cost"));
 
         btnDelete.setCellValueFactory(new PropertyValueFactory<>("btnDelete"));
-                tblOrder.setItems(loadOrderData(obs));
+        tblOrder.setItems(loadOrderData(obs));
         System.out.println(obs);
     }
 
@@ -87,12 +81,6 @@ public class OrderFormController implements Initializable {
     public ObservableList<OrderTm> loadOrderData(ObservableList<OrderTm> obs) {
         Connection connection = null;
         try {
-//            Button btn = new Button("Delete");
-//            btn.setOnAction(event -> {
-//                OrderTm selectedItem = tblOrder.getSelectionModel().getSelectedItem();
-//                System.out.println(selectedItem);
-//                deleteOrder(selectedItem);
-//            });
             connection = DbConnection.getInstance().getConnection();
             PreparedStatement pst = connection.prepareStatement("select * from `order`");
             ResultSet rst = pst.executeQuery();
@@ -127,7 +115,7 @@ public class OrderFormController implements Initializable {
         try {
             Connection connection = DbConnection.getInstance().getConnection();
             PreparedStatement pst = connection.prepareStatement("delete from `order` where id=?");
-            pst.setObject(1,selectedItem.getOrderId());
+            pst.setObject(1, selectedItem.getOrderId());
             int i = pst.executeUpdate();
             tblOrder.getItems().clear();
             obs.removeAll();

@@ -7,7 +7,7 @@
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.text.Font?>
 
-<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="488.0" prefWidth="441.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.techbeats.controller.admin.AddCustomerFormController">
+<StackPane fx:id="stack" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="488.0" prefWidth="441.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.techbeats.controller.admin.AddCustomerFormController">
    <children>
       <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #2c3e50;" stylesheets="@../../style/admin/AddForm.css">
          <children>
@@ -16,12 +16,12 @@
                   <Font name="System Bold" size="18.0" />
                </font>
             </Label>
-            <JFXTextField fx:id="txtCustomerId" layoutX="50.0" layoutY="78.0" prefHeight="25.0" prefWidth="310.0" promptText="customer id" styleClass="textField" />
-            <JFXTextField fx:id="txtCustomerName" layoutX="50.0" layoutY="147.0" prefHeight="25.0" prefWidth="310.0" promptText="customer name" styleClass="textField" stylesheets="@../../style/admin/AddForm.css" />
-            <JFXTextField fx:id="txtCustomerAddress" layoutX="50.0" layoutY="219.0" prefHeight="25.0" prefWidth="310.0" promptText="customer address" styleClass="textField" />
-            <JFXTextField fx:id="txtCustomerContact" layoutX="50.0" layoutY="291.0" prefHeight="25.0" prefWidth="310.0" promptText="customer contact" styleClass="textField" />
-            <JFXTextField fx:id="txtCustomerEmail" layoutX="50.0" layoutY="366.0" prefHeight="25.0" prefWidth="310.0" promptText="cutomer email" styleClass="textField" />
-            <JFXButton layoutX="308.0" layoutY="431.0" onAction="#btnAddCustomer" prefHeight="27.0" prefWidth="68.0" styleClass="btnAddCustomer" text="ADD" textFill="WHITE" />
+            <JFXTextField fx:id="txtCustomerId" layoutX="50.0" layoutY="78.0" onKeyReleased="#release" prefHeight="25.0" prefWidth="310.0" promptText="customer id" styleClass="textField" />
+            <JFXTextField fx:id="txtCustomerName" layoutX="50.0" layoutY="147.0" onKeyReleased="#release" prefHeight="25.0" prefWidth="310.0" promptText="customer name" styleClass="textField" stylesheets="@../../style/admin/AddForm.css" />
+            <JFXTextField fx:id="txtCustomerAddress" layoutX="50.0" layoutY="219.0" onKeyReleased="#release" prefHeight="25.0" prefWidth="310.0" promptText="customer address" styleClass="textField" />
+            <JFXTextField fx:id="txtCustomerContact" layoutX="50.0" layoutY="291.0" onKeyReleased="#release" prefHeight="25.0" prefWidth="310.0" promptText="customer contact" styleClass="textField" />
+            <JFXTextField fx:id="txtCustomerEmail" layoutX="50.0" layoutY="366.0" onKeyReleased="#release" prefHeight="25.0" prefWidth="310.0" promptText="cutomer email" styleClass="textField" />
+            <JFXButton fx:id="addButton" layoutX="308.0" layoutY="431.0" onAction="#btnAddCustomer" prefHeight="27.0" prefWidth="68.0" styleClass="btnAddCustomer" text="ADD" textFill="WHITE" />
          </children>
       </AnchorPane>
    </children>

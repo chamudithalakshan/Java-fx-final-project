@@ -18,10 +18,10 @@
             <content>
                 <TableView fx:id="tblSupplier" prefHeight="315.0" prefWidth="826.0" style="-fx-background-color: #130f40;">
                     <columns>
-                        <TableColumn fx:id="supplierId" prefWidth="121.0" text="C1" />
-                        <TableColumn fx:id="itemCode" prefWidth="138.0" text="C2" />
-                        <TableColumn fx:id="supplierAddress" prefWidth="177.0" text="C3" />
-                        <TableColumn fx:id="contactnmb" prefWidth="182.0" text="C4" />
+                        <TableColumn fx:id="supplierId" prefWidth="145.0" text="C1" />
+                        <TableColumn fx:id="itemCode" prefWidth="187.0" text="C2" />
+                        <TableColumn fx:id="supplierAddress" prefWidth="152.0" text="C3" />
+                        <TableColumn fx:id="contactnmb" prefWidth="134.0" text="C4" />
                   <TableColumn fx:id="name" prefWidth="127.0" text="C5" />
                   <TableColumn fx:id="deleteBtn" prefWidth="58.0" text="C5" />
                     </columns>
@@ -75,7 +75,7 @@
                         <Insets />
                     </opaqueInsets>
                     <HBox.margin>
-                        <Insets right="32.0" />
+                        <Insets left="-71.0" right="18.0" />
                     </HBox.margin>
                 </Label>
             <Label layoutX="552.0" layoutY="10.0" prefHeight="33.0" prefWidth="85.0" text="Name" textFill="#c6baba">

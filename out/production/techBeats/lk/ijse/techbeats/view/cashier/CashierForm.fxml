@@ -29,6 +29,9 @@
                                     <graphic>
                                         <FontAwesomeIcon fill="WHITE" iconName="HOME" size="1.4em" />
                                     </graphic>
+                           <padding>
+                              <Insets right="16.0" />
+                           </padding>
                                 </JFXButton>
                                 <JFXButton layoutX="10.0" layoutY="10.0" onAction="#btnManageOrder" prefHeight="42.0" prefWidth="255.0" styleClass="btnFunction" text="Manage Order" textFill="WHITE">
                                     <cursor>
@@ -40,6 +43,9 @@
                                     <graphic>
                                         <FontAwesomeIcon fill="WHITE" iconName="BOOK" size="1.4em" />
                                     </graphic>
+                           <padding>
+                              <Insets right="6.0" />
+                           </padding>
                                 </JFXButton>
                                 <JFXButton layoutX="10.0" layoutY="52.0" onAction="#btnPlaceOrder" prefHeight="42.0" prefWidth="255.0" styleClass="btnFunction" text="Place order" textFill="WHITE">
                                     <cursor>
@@ -51,6 +57,9 @@
                                     <graphic>
                                         <FontAwesomeIcon fill="#f8f5f5" iconName="SHOPPING_CART" size="1.4em" />
                                     </graphic>
+                           <padding>
+                              <Insets right="31.0" />
+                           </padding>
                                 </JFXButton>
                                 <JFXButton layoutX="10.0" layoutY="304.0" onAction="#btnSignOut" prefHeight="42.0" prefWidth="255.0" styleClass="btnFunction" text="Sign out" textFill="WHITE">
                                     <cursor>
@@ -62,6 +71,9 @@
                                     <graphic>
                                         <FontAwesomeIcon fill="WHITE" iconName="SIGN_OUT" size="1.4em" text="" />
                                     </graphic>
+                           <padding>
+                              <Insets right="42.0" />
+                           </padding>
                                 </JFXButton>
                             </children>
                         </VBox>

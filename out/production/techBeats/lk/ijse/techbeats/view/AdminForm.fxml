@@ -28,127 +28,99 @@
                            <cursor>
                               <Cursor fx:constant="HAND" />
                            </cursor>
-                           <padding>
-                              <Insets left="-16.0" />
-                           </padding>
                            <VBox.margin>
-                              <Insets bottom="3.0" />
+                              <Insets bottom="14.0" />
                            </VBox.margin>
                            <graphic>
                               <FontAwesomeIcon fill="WHITE" iconName="HOME" size="1.4em" />
                            </graphic>
+                           <padding>
+                              <Insets left="-16.0" />
+                           </padding>
                         </JFXButton>
                         <JFXButton layoutX="10.0" layoutY="10.0" onAction="#btnSystemReport" prefHeight="42.0" prefWidth="255.0" styleClass="btnFunction" text="System reports" textFill="WHITE">
                            <cursor>
                               <Cursor fx:constant="HAND" />
                            </cursor>
-                           <padding>
-                              <Insets left="19.0" />
-                           </padding>
                            <VBox.margin>
-                              <Insets bottom="3.0" />
+                              <Insets bottom="14.0" />
                            </VBox.margin>
                            <graphic>
                               <FontAwesomeIcon fill="WHITE" iconName="BOOK" size="1.4em" />
                            </graphic>
+                           <padding>
+                              <Insets left="19.0" />
+                           </padding>
                         </JFXButton>
                         <JFXButton layoutX="10.0" layoutY="52.0" onAction="#btnOrdersOnAction" prefHeight="42.0" prefWidth="255.0" styleClass="btnFunction" text="Orders" textFill="WHITE">
                            <cursor>
                               <Cursor fx:constant="HAND" />
                            </cursor>
                            <VBox.margin>
-                              <Insets bottom="3.0" />
+                              <Insets bottom="14.0" />
                            </VBox.margin>
-                           <padding>
-                              <Insets left="-35.0" />
-                           </padding>
                            <graphic>
                               <FontAwesomeIcon fill="#f8f5f5" iconName="SHOPPING_CART" size="1.4em" />
                            </graphic>
+                           <padding>
+                              <Insets left="-35.0" />
+                           </padding>
                         </JFXButton>
                         <JFXButton layoutX="10.0" layoutY="94.0" onAction="#btnRepaireOnAction" prefHeight="42.0" prefWidth="255.0" styleClass="btnFunction" text="Repairs" textFill="WHITE">
                            <cursor>
                               <Cursor fx:constant="HAND" />
                            </cursor>
-                           <padding>
-                              <Insets left="-30.0" />
-                           </padding>
                            <VBox.margin>
-                              <Insets bottom="3.0" />
+                              <Insets bottom="14.0" />
                            </VBox.margin>
                            <graphic>
                               <FontAwesomeIcon fill="WHITE" iconName="WRENCH" size="1.4em" />
                            </graphic>
+                           <padding>
+                              <Insets left="-30.0" />
+                           </padding>
                         </JFXButton>
                         <JFXButton layoutX="10.0" layoutY="136.0" onAction="#btnGuaranteeOnAction" prefHeight="42.0" prefWidth="255.0" styleClass="btnFunction" text="Guarantee" textFill="WHITE">
                            <cursor>
                               <Cursor fx:constant="HAND" />
                            </cursor>
-                           <padding>
-                              <Insets left="-13.0" />
-                           </padding>
                            <VBox.margin>
-                              <Insets bottom="3.0" />
+                              <Insets bottom="14.0" />
                            </VBox.margin>
                            <graphic>
                               <FontAwesomeIcon fill="WHITE" iconName="FILE_TEXT" size="1.4em" />
                            </graphic>
-                        </JFXButton>
-                        <JFXButton layoutX="10.0" layoutY="178.0" onAction="#btnUsersOnAction" prefHeight="42.0" prefWidth="255.0" styleClass="btnFunction" text="Users" textFill="WHITE">
-                           <cursor>
-                              <Cursor fx:constant="HAND" />
-                           </cursor>
                            <padding>
-                              <Insets left="-43.0" />
+                              <Insets left="-13.0" />
                            </padding>
-                           <VBox.margin>
-                              <Insets bottom="3.0" />
-                           </VBox.margin>
-                           <graphic>
-                              <FontAwesomeIcon fill="WHITE" iconName="USER" size="1.4em" />
-                           </graphic>
-                        </JFXButton>
-                        <JFXButton layoutX="10.0" layoutY="220.0" onAction="#btnPermissionOnAction" prefHeight="42.0" prefWidth="255.0" styleClass="btnFunction" text="Permission" textFill="WHITE">
-                           <cursor>
-                              <Cursor fx:constant="HAND" />
-                           </cursor>
-                           <padding>
-                              <Insets left="-10.0" />
-                           </padding>
-                           <VBox.margin>
-                              <Insets bottom="3.0" />
-                           </VBox.margin>
-                           <graphic>
-                              <FontAwesomeIcon fill="WHITE" iconName="LOCK" size="1.4em" />
-                           </graphic>
                         </JFXButton>
                         <JFXButton layoutX="10.0" layoutY="262.0" onAction="#btnCustomerOnAction" prefHeight="42.0" prefWidth="255.0" styleClass="btnFunction" text="Customers" textFill="WHITE">
                            <cursor>
                               <Cursor fx:constant="HAND" />
                            </cursor>
-                           <padding>
-                              <Insets left="-14.0" />
-                           </padding>
                            <VBox.margin>
-                              <Insets bottom="3.0" />
+                              <Insets bottom="14.0" />
                            </VBox.margin>
                            <graphic>
                               <FontAwesomeIcon fill="WHITE" iconName="USERS" size="1.4em" text="" />
                            </graphic>
+                           <padding>
+                              <Insets left="-14.0" />
+                           </padding>
                         </JFXButton>
                         <JFXButton layoutX="10.0" layoutY="304.0" onAction="#btnSignOutOnAction" prefHeight="42.0" prefWidth="255.0" styleClass="btnFunction" text="Sign out" textFill="WHITE">
                            <cursor>
                               <Cursor fx:constant="HAND" />
                            </cursor>
-                           <padding>
-                              <Insets left="-28.0" />
-                           </padding>
                            <VBox.margin>
-                              <Insets bottom="3.0" />
+                              <Insets bottom="14.0" />
                            </VBox.margin>
                            <graphic>
                               <FontAwesomeIcon fill="WHITE" iconName="SIGN_OUT" size="1.4em" text="" />
                            </graphic>
+                           <padding>
+                              <Insets left="-28.0" />
+                           </padding>
                         </JFXButton>
                      </children>
                   </VBox>

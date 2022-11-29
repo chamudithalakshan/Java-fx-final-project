@@ -17,10 +17,10 @@
                 <content>
                     <TableView fx:id="tblOverview" prefHeight="339.0" prefWidth="843.0">
                         <columns>
-                            <TableColumn fx:id="cid" prefWidth="215.0" text="C1" />
-                            <TableColumn fx:id="orderId" prefWidth="194.0" />
-                            <TableColumn fx:id="qty" prefWidth="194.0" text="C2" />
-                            <TableColumn fx:id="orderDate" prefWidth="194.0" text="C2" />
+                            <TableColumn fx:id="cid" prefWidth="238.0" text="C1" />
+                            <TableColumn fx:id="orderId" prefWidth="224.0" />
+                            <TableColumn fx:id="qty" prefWidth="177.0" text="C2" />
+                            <TableColumn fx:id="orderDate" prefWidth="158.0" text="C2" />
                         </columns>
                <styleClass>
                   <String fx:value="table-row-cell" />

@@ -18,10 +18,10 @@
          <content>
             <TableView fx:id="repaireTable" prefHeight="321.0" prefWidth="840.0" style="-fx-background-color: #130f40;" stylesheets="@../../style/admin/OrderForm.css">
               <columns>
-                <TableColumn fx:id="repaireId" prefWidth="146.0" text="C1" />
-                <TableColumn fx:id="customerId" minWidth="0.0" prefWidth="173.0" text="C2" />
-                  <TableColumn fx:id="repaireType" minWidth="0.0" prefWidth="270.0" text="C2" />
-                  <TableColumn fx:id="cost" minWidth="0.0" prefWidth="131.0" text="C2" />
+                <TableColumn fx:id="repaireId" prefWidth="175.0" text="C1" />
+                <TableColumn fx:id="customerId" minWidth="0.0" prefWidth="222.0" text="C2" />
+                  <TableColumn fx:id="repaireType" minWidth="0.0" prefWidth="254.0" text="C2" />
+                  <TableColumn fx:id="cost" minWidth="0.0" prefWidth="69.0" text="C2" />
               </columns>
                <styleClass>
                   <String fx:value="noheader" />
@@ -66,7 +66,7 @@
                   <Insets right="138.0" />
                </HBox.margin>
             </Label>
-            <Label layoutX="240.0" layoutY="10.0" prefHeight="33.0" prefWidth="115.0" text="Cost" textFill="#c6baba">
+            <Label layoutX="240.0" layoutY="10.0" prefHeight="31.0" prefWidth="57.0" text="Cost" textFill="#c6baba">
                <font>
                   <Font size="15.0" />
                </font>
@@ -74,9 +74,14 @@
                   <Insets />
                </opaqueInsets>
                <HBox.margin>
-                  <Insets right="39.0" />
+                  <Insets right="14.0" />
                </HBox.margin>
             </Label>
+            <JFXButton onAction="#btnAddRepare" prefHeight="31.0" prefWidth="111.0" styleClass="btnAddCustomer" stylesheets="@../../style/admin/CustomerForm.css" text="Add repaire" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </JFXButton>
          </children>
       </HBox>
       <JFXTextField focusColor="#130f40" layoutX="575.0" layoutY="36.0" prefHeight="25.0" prefWidth="234.0" promptText="                                     Search here" styleClass="textField" unFocusColor="#130f40">

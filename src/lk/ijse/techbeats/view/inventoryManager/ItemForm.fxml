@@ -3,6 +3,7 @@
 <?import com.jfoenix.controls.JFXButton?>
 <?import com.jfoenix.controls.JFXTextField?>
 <?import java.lang.String?>
+<?import java.net.URL?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ScrollPane?>
@@ -12,19 +13,24 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<Pane maxHeight="600.0" maxWidth="840.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="840.0" style="-fx-background-color: #130f40;" stylesheets="@../../style/admin/CustomerForm.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.techbeats.controller.inventoryManager.ItemFormController">
+<Pane maxHeight="600.0" maxWidth="840.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="840.0" style="-fx-background-color: #130f40;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.techbeats.controller.inventoryManager.ItemFormController">
     <children>
         <ScrollPane layoutX="7.0" layoutY="272.0" prefHeight="328.0" prefWidth="826.0">
             <content>
                 <TableView fx:id="tblitem" prefHeight="315.0" prefWidth="826.0" style="-fx-background-color: #130f40;">
                     <columns>
-                        <TableColumn fx:id="itemCode" prefWidth="102.0" text="C1" />
-                        <TableColumn fx:id="description" prefWidth="194.0" text="C2" />
-                        <TableColumn fx:id="barand" prefWidth="111.0" text="C3" />
-                        <TableColumn fx:id="unitPrice" prefWidth="120.0" text="C4" />
-                  <TableColumn fx:id="qty" prefWidth="120.0" text="C4" />
+                        <TableColumn fx:id="itemCode" prefWidth="142.0" text="C1" />
+                        <TableColumn fx:id="description" prefWidth="166.0" text="C2" />
+                        <TableColumn fx:id="barand" prefWidth="118.0" text="C3" />
+                        <TableColumn fx:id="unitPrice" prefWidth="146.0" text="C4" />
+                  <TableColumn fx:id="qty" prefWidth="75.0" text="C4" />
                   <TableColumn fx:id="btnDelete" prefWidth="120.0" text="C4" />
                     </columns>
+               <styleClass>
+                  <String fx:value="column-header" />
+                  <String fx:value="my-table" />
+                  <String fx:value="noheader" />
+               </styleClass>
                 </TableView>
             </content>
             <styleClass>
@@ -103,4 +109,8 @@
         </JFXTextField>
         <JFXButton layoutX="779.0" layoutY="28.0" prefHeight="25.0" prefWidth="24.0" styleClass="btnSearch" text=" " />
     </children>
+   <stylesheets>
+      <URL value="@../../style/admin/CustomerForm.css" />
+      <URL value="@../../style/admin/OrderForm.css" />
+   </stylesheets>
 </Pane>
